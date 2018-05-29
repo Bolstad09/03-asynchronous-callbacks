@@ -23,7 +23,7 @@ describe('Reader Module', () => {
 
   it('when given an arry of files, returns contents', (done) => {
     let paths = [`data/apple.txt`, `data/banana.txt`];
-    let path = '';
+    let path = ' ';
     paths.forEach((ele) => {
       path = ele.toString();
       reader(path, (err, data) => {
@@ -33,6 +33,7 @@ describe('Reader Module', () => {
       });
     });
   });
+
   it('when given a new array, return contents in the array', (done) => {
     let paths = [`data/apple.txt`, `data/banana.txt`];
     let path = '';
@@ -46,6 +47,7 @@ describe('Reader Module', () => {
       });
     });
   });
+  
   it('when given array, return contents in any order no matter the time it takes', (done) => {
     let paths = [`data/apple.txt`, `data/banana.txt`, `data/cucumbers.txt`];
     let path = '';
